@@ -1,9 +1,20 @@
+/*
+ * @Amit NAIK
+ */
 package my.usecase.elevator;
 
 import java.util.concurrent.PriorityBlockingQueue;
 
+/**
+ * The Class ElevatorSimulator.
+ */
 public class ElevatorSimulator {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		
 		PriorityBlockingQueue<Person> liftqueue = new PriorityBlockingQueue<Person>(20);
