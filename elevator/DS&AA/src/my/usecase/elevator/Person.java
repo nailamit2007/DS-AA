@@ -6,16 +6,55 @@ package my.usecase.elevator;
 public class Person implements Comparable<Person>{
 
 	/** The direction. */
-	public String direction;
+	private String direction;
 	
 	/** The floor. */
-	public int floor;
+	private int floor;
 	
 	/** The destination. */
-	public int destination;
+	private int destination;
 	
+	/** The weight. */
+	private double weight;
+	
+	/**
+	 * Gets the weight.
+	 *
+	 * @return the weight
+	 */
+	public double getWeight() {
+		return weight;
+	}
+
+	/**
+	 * Sets the weight.
+	 *
+	 * @param weight the new weight
+	 */
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	/**
+	 * Gets the in lift ind.
+	 *
+	 * @return the in lift ind
+	 */
+	public Boolean getInLiftInd() {
+		return inLiftInd;
+	}
+
+	/**
+	 * Sets the in lift ind.
+	 *
+	 * @param inLiftInd the new in lift ind
+	 */
+	public void setInLiftInd(Boolean inLiftInd) {
+		this.inLiftInd = inLiftInd;
+	}
+
 	/** The in lift ind. */
-	public Boolean inLiftInd = Boolean.FALSE;
+	private Boolean inLiftInd = Boolean.FALSE;
 	
 	/**
 	 * Gets the direction.
@@ -69,11 +108,12 @@ public class Person implements Comparable<Person>{
 	 * @param floor the floor
 	 * @param destination the destination
 	 */
-	public Person(String direction, int floor, int destination) {
+	public Person(String direction, int floor, int destination, double weight) {
 		super();
 		this.direction = direction;
 		this.floor = floor;
 		this.destination = destination;
+		this.weight = weight;
 	}
 	
 	/**
