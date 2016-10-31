@@ -22,11 +22,13 @@ public class Elevator implements Runnable {
 	/** The lift name. */
 	private String liftName;
 
+	/** The over weight. */
 	private final double OVER_WEIGHT = 500;
 
 	/** The is powe down. */
 	private boolean isPoweDown = Boolean.FALSE;
 
+	/** The is over weight. */
 	private boolean isOverWeight = Boolean.FALSE;
 
 	/** The lift up reqqueue. */
@@ -38,50 +40,110 @@ public class Elevator implements Runnable {
 	/** The lift in queue. */
 	protected PriorityBlockingQueue<Person> liftInQueue;
 
+	/**
+	 * Checks if is free.
+	 *
+	 * @return true, if is free
+	 */
 	public boolean isFree() {
 		return free;
 	}
 
+	/**
+	 * Sets the free.
+	 *
+	 * @param free the new free
+	 */
 	public void setFree(boolean free) {
 		this.free = free;
 	}
 
+	/**
+	 * Checks if is powe down.
+	 *
+	 * @return true, if is powe down
+	 */
 	public boolean isPoweDown() {
 		return isPoweDown;
 	}
 
+	/**
+	 * Sets the powe down.
+	 *
+	 * @param isPoweDown the new powe down
+	 */
 	public void setPoweDown(boolean isPoweDown) {
 		this.isPoweDown = isPoweDown;
 	}
 
+	/**
+	 * Checks if is over weight.
+	 *
+	 * @return true, if is over weight
+	 */
 	public boolean isOverWeight() {
 		return isOverWeight;
 	}
 
+	/**
+	 * Sets the over weight.
+	 *
+	 * @param isOverWeight the new over weight
+	 */
 	public void setOverWeight(boolean isOverWeight) {
 		this.isOverWeight = isOverWeight;
 	}
 
+	/**
+	 * Gets the lift up reqqueue.
+	 *
+	 * @return the lift up reqqueue
+	 */
 	public PriorityBlockingQueue<Person> getLiftUpReqqueue() {
 		return liftUpReqqueue;
 	}
 
+	/**
+	 * Sets the lift up reqqueue.
+	 *
+	 * @param liftUpReqqueue the new lift up reqqueue
+	 */
 	public void setLiftUpReqqueue(PriorityBlockingQueue<Person> liftUpReqqueue) {
 		this.liftUpReqqueue = liftUpReqqueue;
 	}
 
+	/**
+	 * Gets the lift down reqqueue.
+	 *
+	 * @return the lift down reqqueue
+	 */
 	public PriorityBlockingQueue<Person> getLiftDownReqqueue() {
 		return liftDownReqqueue;
 	}
 
+	/**
+	 * Sets the lift down reqqueue.
+	 *
+	 * @param liftDownReqqueue the new lift down reqqueue
+	 */
 	public void setLiftDownReqqueue(PriorityBlockingQueue<Person> liftDownReqqueue) {
 		this.liftDownReqqueue = liftDownReqqueue;
 	}
 
+	/**
+	 * Gets the lift in queue.
+	 *
+	 * @return the lift in queue
+	 */
 	public PriorityBlockingQueue<Person> getLiftInQueue() {
 		return liftInQueue;
 	}
 
+	/**
+	 * Sets the lift in queue.
+	 *
+	 * @param liftInQueue the new lift in queue
+	 */
 	public void setLiftInQueue(PriorityBlockingQueue<Person> liftInQueue) {
 		this.liftInQueue = liftInQueue;
 	}
@@ -223,6 +285,11 @@ public class Elevator implements Runnable {
 		}
 	}
 
+	/**
+	 * Gets the current weight.
+	 *
+	 * @return the current weight
+	 */
 	private double getCurrentWeight() {
 		double currentWght = 0.0;
 		for (Person person : liftInQueue) {
