@@ -107,6 +107,7 @@ public class Person implements Comparable<Person>{
 	 * @param direction the direction
 	 * @param floor the floor
 	 * @param destination the destination
+	 * @param weight the weight
 	 */
 	public Person(String direction, int floor, int destination, double weight) {
 		super();
